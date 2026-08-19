@@ -1,28 +1,37 @@
-# Technical Assessment - Data Engineering Q&A
+# Technical Assessment Q&A
 
-This repository contains the assessment responses and design notes for the data engineering questions.
+This repository contains the written responses for a data engineering assessment. It is intentionally documentation-focused and does not include any implementation code or production environment details.
 
-The content is intentionally theoretical and documentation-focused. It is structured as a reviewable Q&A set, covering the key design decisions, architectural choices, and operational considerations required for the assessment.
+## Purpose
 
-## Scope
+The assessment covers how to design a trusted, scalable, and governable data platform for customer and transaction data, with a strong focus on telecom-style operational realities.
 
-The work includes responses for:
+## Q&A overview
 
-- Lakehouse and medallion architecture
-- Business logic placement by layer
-- Pipeline and integration design
-- Failure recovery and stakeholder communication
-- Data quality, governance, and security
+1. Q3A — [Lakehouse & Medallion Architecture](docs/question%203A_lakehouse_medallion_architecture.md)
+   - Explains the raw-to-consumption data flow and the purpose of Bronze, Silver, and Gold.
+
+2. Q3B — [Business Logic by Medallion Layer](docs/question%203B_layer_logic.md)
+   - Defines what belongs in each layer and what should remain out of scope for each stage.
+
+3. Q4A — [Pipeline & Integration Design](docs/question%204A_pipeline_integration_design.md)
+   - Covers ingestion, schema handling, deduplication, reprocessing, monitoring, and CI/CD.
+
+4. Q4B — [Failure Recovery & Stakeholder Communication](docs/question%204B_failure_recovery_communication.md)
+   - Describes how to recover from a failed pipeline and keep stakeholders informed.
+
+5. Q5A — [Data Quality, Governance & Security](docs/question%205A_data_quality_governance_security.md)
+   - Connects technical controls to trust, compliance, privacy, and data stewardship.
 
 ## Repository structure
 
-- docs/ contains the written assessment answers
-- README.md provides the project overview
+- docs/ — assessment answers and design notes
+- README.md — project overview and Q&A index
 
 ## Notes
 
-- No production code is included.
-- No live system or credentials are included.
-- The focus is on the assessment content itself rather than implementation artifacts.
+- This is a theoretical assessment.
+- No production code, secrets, or live system access are included.
+- The focus is on clear design thinking and structured reasoning.
 
 
