@@ -1,68 +1,48 @@
-# MTN Technical Assessment: Lakehouse Data Engineering Solution
+# MTN Technical Assessment
 
-This repository is a portfolio-ready version of my technical assessment, prepared for MTN and for other potential employers evaluating my data engineering capability.
+This repository contains my technical assessment for MTN. It is a theoretical, presentation-focused response to the assessment brief and is designed to show how I approach data engineering challenges in a telecom environment.
 
-The work demonstrates how I would design, build, and operate a modern data platform for large-scale transaction and customer analytics using a Lakehouse architecture, SQL-based transformation logic, PySpark ETL, and strong operational controls around data quality, deduplication, and idempotency.
+The focus is on building a trusted, scalable, and governable data platform for customer and transaction data. The work covers architecture, pipeline design, operational resilience, and data quality controls without relying on any production implementation or live system access.
 
-## Project objective
+## Overview
 
-The goal of this assessment is to show that I can:
+I have structured the assessment to reflect the type of thinking I would bring to a real data engineering problem at MTN:
 
-- design reliable, scalable data pipelines for large enterprise datasets
-- build trusted analytics layers with clear business logic and lineage
-- enforce quality checks and recovery patterns in production-style workflows
-- deliver practical engineering solutions that balance performance, governance, and maintainability
+- a modern Lakehouse architecture for ingestion and analytics
+- clear separation between raw, trusted, and consumption-ready data layers
+- strong handling of duplicates, late-arriving records, and invalid data
+- operational controls for pipeline recovery, monitoring, and stakeholder communication
+- governance and security controls appropriate for customer and transaction data
 
 ## Assessment scope
 
-This project is structured as a clean, reviewable technical submission based on the assessment document provided for MTN. It brings together the key solution areas needed to demonstrate strong data engineering capability in a modern telecom and digital-services context:
+The repository includes the core elements of the brief and presents them as a coherent solution narrative:
 
-- SQL and analytical reporting for customer and transaction insights
-- Data validation, deduplication, and resilience in ETL flows
-- Lakehouse design and medallion-style data layering
-- Pipeline orchestration and operational recovery thinking
-- Data quality, governance, and security controls
+- architecture and medallion-layer design
+- business logic placement across Bronze, Silver, and Gold
+- pipeline and integration design for high-volume transaction processing
+- failure recovery and communication planning
+- data quality, governance, and security controls
 
 ## Repository structure
 
-```text
-.
-├── docs/                                      # Architecture, integration, governance, and recovery answers
-├── src/
-│   └── etl/
-│       ├── question 2A: clean_transactions.py
-│       └── question 2B: pipeline_idempotent.py
-├── sql/
-│   ├── question_1A_customer_monthly_summary.sql
-│   ├── question_1B_top_customers_by_region.sql
-│   ├── question1: test_data_setup.sql
-│   └── question 1C: performance_diagnosis.md
-├── tests/
-│   └── test_question2.py
-├── requirements-test.txt
-├── run_question2_tests.sh
-├── README.md
-└── .github/
-```
+- docs/ contains the assessment responses and design notes
+- README.md introduces the project and its objective
+- The material is intentionally theoretical and presentation-focused
 
-## Why this is relevant to MTN and modern data engineering
+## Why this is relevant to MTN
 
-This solution reflects the kind of thinking expected in a telecom or digital-services context:
+The design choices reflect the realities of a large telecommunications and digital-services business:
 
-- trusted customer and transaction data at scale
-- awareness of data quality and operational resilience
-- Lakehouse patterns suited to structured analytics and downstream consumption
-- clear separation of raw, refined, and analytics-ready datasets
-- emphasis on business logic, governance, and maintainability rather than ad hoc scripts
+- customer and transaction data must be trusted and consistent
+- data pipelines need to be resilient and auditable
+- governance is essential because the data includes sensitive information
+- analytics and operational reporting must be built on reliable, well-governed foundations
 
-## Assessment notes
+## Notes
 
-- The repository is intended as a technical assessment artifact and presentation asset.
-- It does not include production credentials, sensitive data, or live infrastructure secrets.
-- The technical substance has been preserved while the project framing has been adapted for a professional hiring audience.
-
-## Presentation focus
-
-This MTN version is designed to be reviewed as a full solution narrative rather than as a numbered answer set. The project highlights the practical engineering decisions behind a modern, trusted, production-ready data platform for a telecom or digital services environment.
+- This is a theoretical assessment and not a live production deployment.
+- No production credentials, environment details, or sensitive customer data are included.
+- The work is written to be clear, credible, and suitable for a hiring or technical review conversation.
 
 
